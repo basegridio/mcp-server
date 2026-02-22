@@ -1,4 +1,6 @@
+// @ts-ignore
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+// @ts-ignore
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import { BaseGridClient } from "./client/basegrid-client.js";
@@ -31,7 +33,7 @@ server.registerTool(
         inputSchema: {
             content: z.string().describe("The memory content to store"),
             agentId: z.string().optional().describe("Agent/namespace identifier (default: 'personal')"),
-            metadata: z.record(z.any()).optional().describe("Optional metadata key-value pairs"),
+            metadata: z.record(z.string(), z.any()).optional().describe("Optional metadata key-value pairs"),
             importance: z.number().min(0).max(1).optional().describe("Importance score 0-1 (default: 0.5)")
         } as any
     },
