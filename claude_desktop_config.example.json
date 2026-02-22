@@ -1,0 +1,13 @@
+{
+    "mcpServers": {
+        "basegrid": {
+            "command": "node",
+            "args": [
+                "/Users/navil/Documents/BaseGrid_Product/mcp-server/dist/index.js"
+            ],
+            "env": {
+                "BASEGRID_API_KEY": "YOUR_API_KEY_HERE"
+            }
+        }
+    }
+}
