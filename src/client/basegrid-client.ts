@@ -4,7 +4,7 @@ export class BaseGridClient {
     private apiKey: string;
     private baseUrl: string;
 
-    constructor(apiKey: string, baseUrl: string = 'https://api.basegrid.io') {
+    constructor(apiKey: string, baseUrl: string = 'https://basegrid-production.up.railway.app') {
         this.apiKey = apiKey;
         this.baseUrl = baseUrl.replace(/\/$/, '');
     }
